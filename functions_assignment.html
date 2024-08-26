@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+//1. fibonacci numbers
+function fibonacci(n){
+let fib=[0,1];
+for(let i=2;i<n;i++){
+fib[i]=fib[i-1] + fib[i-2]
+}
+return fib;
+}
+console.log(fibonacci(10))
+
+
+
+// 2.convert celsius to fahrenheit
+// formula fahrenheit=celsius * 1.8 +32
+function converttofahrenheit(celsius){
+     return celsius * 1.8 +32;
+}
+let celsius=1;
+let fahrenheit=converttofahrenheit(celsius);
+console.log(celsius + "°C is equal to " + fahrenheit + "°F");
+
+
+
+//3.square root of a number
+function squareroot(number){
+    return Math.sqrt(number);
+}
+let number=11;
+let value=squareroot(number)
+console.log("Squareroot of " +number +" " +'is' +" " +value)
+
+
+
+// 4.JavaScript program to generate a random integer between two given numbers.
+function generateRandomnumber(min,max){
+              return Math.floor(Math.random() * (max-min)+1)+min;
+}
+let valuebetween=generateRandomnumber(10,25)
+console.log(valuebetween)
+
+
+
+// 5.javascript program to check if the passed string is palindrome or not.
+   function palindrome(str){
+    let reversestr=str.split('').reverse().join('');
+    if(str===reversestr){
+        return 'it is a palindrome'
+    }else{
+        return 'it is not a palindrome'
+    }
+   }
+   console.log(palindrome('dad'))
+
+</script>
+</html>
